@@ -1,0 +1,31 @@
+version: 2
+
+seeds:
+  - name: raw_activities
+    config:
+      column_types:
+        activity_id: integer
+        patient_id: integer
+        activity_type: string
+        activity_date: datetime
+        duration_minutes: integer
+
+  - name: raw_patients
+    config:
+      column_types:
+        data: string
+
+  - name: raw_pcns
+    config:
+      column_types:
+        id: integer
+        pcn_name: string
+
+  - name: raw_practices
+    config:
+      column_types:
+        id: integer
+        practice_name: string
+        location: string
+        established_date: date
+        pcn: integer
