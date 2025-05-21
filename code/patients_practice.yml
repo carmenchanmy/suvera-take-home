@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name:  patients_practice_pcn
+    description: "join with raw patient,practice and pcn csvs"
+    columns:
+
+      - name: unique_patient_id
+        description: "concatenating patient id, practice id and email for a truly unique patient id due to duplications"
+        tests:
+          - not_null
+
+      - name: patient_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: practice_id
+        description: ""
+        tests: 
+          - not_null
+
+      - name: age
+        description: ""
+        tests: 
+          - not_null
+
+      - name: gender
+        description: ""
+        tests: 
+          - not_null
+
+      - name: registration_date
+        description: ""
+        tests: 
+          - not_null
+
+      - name: conditions
+        description: ""
+        tests: 
+          - not_null
+
+      - name: email
+        description: ""
+
+      - name: phone
+        description: ""
+        tests: 
+          - not_null
+
+      - name: practice_name
+        description: ""
+        tests: 
+          - not_null
+
+      - name: pcn
+        description: ""
+        tests: 
+          - not_null
+
+      - name: pcn_name
+        description: ""
+        tests: 
+          - not_null
+
+      - name: valid_patient_id_flag
+        description: ""
+        tests: 
+          - not_null
