@@ -1,4 +1,5 @@
 select
+pt.unique_patient_id
 a.patient_id,
 pt.email,
 pt.practice_id,
