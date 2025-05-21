@@ -8,7 +8,7 @@ with raw_patients as (
   JSON_QUERY(data, '$.conditions') AS conditions,
   JSON_VALUE(data, '$.contact.email') AS email,
   JSON_VALUE(data, '$.contact.phone') AS phone
-FROM {{ ref('raw_pats') }}
+FROM {{ ref('raw_patients') }}
 ),
 data_transform as (
 select
