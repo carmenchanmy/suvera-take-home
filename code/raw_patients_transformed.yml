@@ -10,6 +10,11 @@ models:
             - practice_id
     columns:
 
+      - name: unique_patient_id
+        description: "concatenating patient id, practice id and email for a truly unique patient id due to duplications"
+        tests:
+          - not_null
+
       - name: patient_id
         description: ""
         tests:
