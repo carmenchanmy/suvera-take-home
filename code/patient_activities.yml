@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name:  patient_activities
+    description: "join with raw patient,and activities csvs"
+    columns:
+
+      - name: unique_patient_id
+        description: "concatenating patient id, practice id and email for a truly unique patient id due to duplications"
+        tests:
+          - not_null
+
+      - name: patient_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: practice_id
+        description: ""
+        tests: 
+          - not_null
+
+      - name: email
+        description: ""
+
+      - name: activity_type
+        description: ""
+        tests: 
+          - not_null
+
+      - name: activity_date
+        description: ""
+        tests: 
+          - not_null
+
+      - name: activity_over90d_flag
+        description: ""
+        tests: 
+          - not_null
+
+      - name: event_number
+        description: ""
+        tests: 
+          - not_null
