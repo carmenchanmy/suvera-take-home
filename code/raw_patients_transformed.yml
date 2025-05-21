@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: raw_patients_transformed
+    description: "raw patients table with json extracted into columns"
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - patient_id
+            - practice_id
+    columns:
+
+      - name: patient_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: practice_id
+        description: ""
+        tests: 
+          - not_null
+
+      - name: age
+        description: ""
+        tests: 
+          - not_null
+
+      - name: gender
+        description: ""
+        tests: 
+          - not_null
+
+      - name: registration_date
+        description: ""
+        tests: 
+          - not_null
+
+      - name: conditions
+        description: ""
+        tests: 
+          - not_null
+
+      - name: email
+        description: ""
+
+      - name: phone
+        description: ""
+        tests: 
+          - not_null
